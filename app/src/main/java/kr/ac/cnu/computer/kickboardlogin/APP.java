@@ -1,0 +1,25 @@
+package kr.ac.cnu.computer.kickboardlogin;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class APP extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_appmain);
+        Button summon = findViewById(R.id.summon);
+        summon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(APP.this, User.class);
+                startActivity(intent);
+
+            }
+        });
+    }
+}
